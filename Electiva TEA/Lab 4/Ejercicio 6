@@ -1,0 +1,22 @@
+def calculoSalario(horas, tarifa):
+    max_horas_semanales = 40
+    horas_extras = 0
+    if (horas > max_horas_semanales):
+        horas_extras = horas - max_horas_semanales
+        calculo= (max_horas_semanales * tarifa) + (horas_extras * (tarifa*1.5))
+    else:
+        calculo = horas * tarifa
+
+    
+    return calculo
+
+
+
+try:
+    horas = int(input ("Ingrese número de horas: "))
+    tarifa = int(input("Ingrese tarifa por hora: "))
+    pago= calculoSalario(horas, tarifa) 
+    print(pago)
+except:
+    print ("Error, ingresar un valor numérico")
+    
